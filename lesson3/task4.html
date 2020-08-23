@@ -35,7 +35,12 @@
 
 			const result = 	products.filter(group => "photos" in group && group.photos.length > 0);	
 
+			const ascendingSort = products.sort(function(group1, group2){
+				return group1.price - group2.price;
+			});
+
 console.log(result);
+console.log(ascendingSort);
 	</script>
 </body>
 </html>
