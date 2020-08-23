@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Task 1_1</title>
+</head>
+<body>
+	<script>
+		'use strict';
+
+		let Discount = {
+			make25PercentDiscount: function(percent){
+				console.log("Цена товара при скидке в 25 процентов:  " + (this.price - this.price / 100 * percent))  
+			}
+		}
+		
+		function Product(name, price){
+			this.name = name,
+			this.price = price
+		}
+
+		Product.prototype = Discount;
+
+		const bicycle = new Product('mountainBike', 25000);
+		console.log(bicycle.name);
+		console.log(bicycle.price);
+		bicycle.make25PercentDiscount(25);
+
+		const bicycle2 = new Product('bike', 40000);
+		console.log(bicycle2.name);
+		console.log(bicycle2.price);
+		bicycle2.make25PercentDiscount(25);
+
+	</script>	
+</body>
+</html>
