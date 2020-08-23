@@ -2,13 +2,50 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>Task 1_1</title>
+	<title>Task 1_2</title>
 </head>
 <body>
 	<script>
 		'use strict';
-		
-		
+				
+		function Post(author, text, date){
+			this.author = author,
+			this.text = text,
+			this.date = date
+		};
+
+		Post.prototype.edit = function(text){
+			this.text = text
+		};
+
+		function AttachedPost (author, text, date){
+			Post.call(this, author, text, date);
+			this.highlighted = "false";
+		}
+
+		AttachedPost.prototype = Object.create(Post.prototype);
+		AttachedPost.prototype.constructor = AttachedPost;
+
+		AttachedPost.prototype.makeTextHighlighted = function(highlighted){
+			this.highlighted = "true"
+		};
+
+		const user = new Post("admin", "lorem", "20.08.2020");
+		console.log(user.author);
+		console.log(user.text);
+		console.log(user.date);
+		user.edit("hello");
+		console.log(user.text);
+
+		const user1 = new AttachedPost("moder", "World", "08/08/1979");
+		console.log(user1.author);
+		console.log(user1.text);
+		console.log(user1.date);
+		console.log(user1.highlighted);
+		user1.makeTextHighlighted();
+		console.log(user1.highlighted);
+		user1.edit("hello world");
+		console.log(user1.text);
 
 	</script>	
 </body>
