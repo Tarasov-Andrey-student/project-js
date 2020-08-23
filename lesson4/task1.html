@@ -8,6 +8,19 @@
 	<script>
 		'use strict';
 		
+		function numberToObject(number){
+			if (Number.isInteger(number) && number > 0 && number < 999){
+				return {
+					units: number % 10, //это единицы
+					tens: Math.floor(number / 10) % 10, //это десятки
+					hundreds: Math.floor(number / 100) //это сотни
+				}
+			} else {
+				alert("Вы ввели неправильное число");
+			}
+		}
+		let num = +prompt("Введите число от 0 до 999");
+		console.log(numberToObject(num));
 	</script>	
 </body>
 </html>
