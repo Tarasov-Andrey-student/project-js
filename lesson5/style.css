@@ -1,0 +1,20 @@
+.show {
+    margin: 0 auto;
+    width: 600px;
+    height: 100px;
+    box-shadow: 3px 3px 3px #ccc;
+    padding: 20px;
+    background-color: #ccc;
+}
+
+.open_window, .close_window {
+    display: block;
+    margin: 0 auto;
+    width: 200px;
+    height: 50px;
+    box-shadow: 3px 3px 3px #ccc;
+}
+
+.hide {
+    display: none;
+}
