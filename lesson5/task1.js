@@ -1,3 +1,5 @@
+'use strict';
+
 const modal = document.querySelector('.show');
 const seeWindow = document.querySelector('.open_window');
 const noneWindow = document.querySelector('.close_window');

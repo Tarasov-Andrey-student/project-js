@@ -1,0 +1,23 @@
+.content {
+  display: flex;
+  justify-content: center;
+  width: 1140px;
+  margin: 0 auto;
+}
+
+.product {
+  display: flex;
+  flex-direction: column;
+  width: 150px;
+  align-items: center;
+  margin: 20px;
+}
+
+.product img {
+  display: block;
+  margin: 20px;
+}
+
+button {
+  display: block;
+}
