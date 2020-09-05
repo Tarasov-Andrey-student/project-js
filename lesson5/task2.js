@@ -7,7 +7,10 @@ buttons.forEach(function (button) {
   });
 });
 
-
+/**
+ * Функция создает объект и при нажатии на кнопки "Подробнее", "Отмена" выводит либо текст, либо картинку
+ * @param {*} clickedButtonEvent Принимает объект и из него вытаскивает свойства по тегам и классам
+ */
 function handleClick(clickedButtonEvent) {
   const cardNode = clickedButtonEvent.target.parentNode;
 
