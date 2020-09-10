@@ -41,6 +41,15 @@
     -->
 
     <script>
+        'use strict';
+
+        let buttons = document.querySelectorAll('button');
+        buttons.forEach(function (button) {
+            button.addEventListener('click', function () {
+                button.parentNode.style.backgroundColor = 'lightgreen';
+                button.innerHTML = 'Добавлено';
+            });
+        });
         
     </script>
 </body>

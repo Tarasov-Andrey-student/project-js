@@ -17,6 +17,15 @@
     padding. -->
 
     <script>
+        'use strict';
+
+        let divEl = document.querySelectorAll('div');
+        // divEl.forEach(function(element) {
+        //     element.style.padding = "10px"
+        // });
+        for (let i = 0; i < divEl.length; i++) {
+            divEl[i].style.padding = "10px"
+        };
         
     </script>
 </body>

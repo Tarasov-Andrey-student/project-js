@@ -19,6 +19,13 @@
     -->
 
     <script>
+        'use strict';
+
+        let spanEl = document.querySelector('span');
+        let fromEl = document.getElementById('from');
+        fromEl.addEventListener('change', function (event) {
+            spanEl.innerHTML = event.target.value;
+        });
         
     </script>
 </body>
